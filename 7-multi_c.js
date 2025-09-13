@@ -1,12 +1,15 @@
 let line = "C is fun";
-let argument = process.argv[2];
+let argument = process.argv.slice(2);
+let number = parseInt(argument, 10);
 
-if(typeof argument !== "number"){
+if(argument.length === 0){
 	console.log("Missing number of occurences");
 }
-
-let count = 0;
-while(count < argument){
-	console.log(line);
-	count++;
+else{
+	let count = 0;
+	while(count < number){
+		console.log(line);
+		count++;
+	}
 }
+
