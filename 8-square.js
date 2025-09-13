@@ -1,18 +1,16 @@
-let shape = "X";
 let line = "";
-let argument = process.argv.slice(2);
-let number = parseInt(argument, 10);
+let shape = "X";
+let number = parseInt(process.argv.slice(2), 10);
 
 if(isNaN(number)){
 	console.log("Missing size");
 }
 else{
-	let count = 0;
-	for(let i=0; i<number; i++){
-		line += shape;
-	}
-	while(count < number){
+	for (let i = 0; i < number; i++) {
+		let line = ""; 
+		for (let j = 0; j < number; j++) {
+		  line += shape;
+		}
 		console.log(line);
-		count++;
-	}
+    }
 }
