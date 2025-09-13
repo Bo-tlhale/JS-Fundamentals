@@ -9,4 +9,4 @@ let count = 0;
 while(count < argument){
 	console.log(line);
 	count++;
-
+}
